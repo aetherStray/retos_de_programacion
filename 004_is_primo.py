@@ -11,22 +11,21 @@
 
 def is_primo(number):
     
-    contador = 0
-    
-    for c in range (1,(number+2)//2):
-        
-        if(number % c == 0):
-            contador += 1
-            
-    if (contador <= 1):
+    if(number == 1):
         print(f"{number} es primo")
-    else:
-        print(f"{number} no es primo")
-        
+        return 0 
+    
+    for c in range (2,(number+2)//2):
+            
+        if (number % c == 0):
+            print(f"{number} no es primo")
+            return 0 
+    
+    print(f"{number} es primo")
     pass
 
 
-for c in range (1,101):
+for c in range (689538005,689538006):
     is_primo(c)
     
 
